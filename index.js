@@ -72,6 +72,12 @@ const getName = path => {
 		p.isFunctionExpression()
 	);
 
+	// If the parent was not resolved, indicate as global 
+	if (!fParent)
+	{
+		return 'global';
+	}
+
 	let name = 'anonymous function';
 
 	switch (fParent.type) {
