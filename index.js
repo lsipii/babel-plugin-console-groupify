@@ -44,7 +44,7 @@ const ConsoleLogCheckerVisitor = {
 
 		args.state.gotReturn = true;
 	}
-}
+};
 
 const generateGroupStart = functionLabel =>
 	t.expressionStatement(
@@ -81,11 +81,11 @@ const getName = path => {
 		case 'FunctionExpression':
 		case 'ArrowFunctionExpression':
 			if (fParent.parent.id && fParent.parent.id.name) {
-				name = fParent.parent.id.name
+				name = fParent.parent.id.name;
 			}
 
 			if (fParent.node.id && fParent.node.id.name) {
-				name = fParent.node.id.name
+				name = fParent.node.id.name;
 			}
 
 			if (fParent.parent.left && fParent.parent.left.property && fParent.parent.left.property.name) {
@@ -97,7 +97,7 @@ const getName = path => {
 	}
 
 	return name;
-}
+};
 
 function ConsoleGroupify (babel) {
 	return {
@@ -130,7 +130,7 @@ function ConsoleGroupify (babel) {
 				}
 			}
 		}
-	}
+	};
 
 }
 
